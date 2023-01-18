@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta http-equiv="X-UA-Compatible" charset="UTF-8" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Personal Resume YankoNL</title>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://kit.fontawesome.com/b13402a14a.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+<!-- - - - - - - - Home - - - - - - -->
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="css/images/logo.jpg" alt="logo">
+                    <ul id="sidemenu">
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="https://github.com/YankoNL/">GitHub</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <i class="m-icon fa-solid fa-xmark" onclick="closemenu()"></i>
+                    </ul>
+                    <i class="m-icon fa-solid fa-bars" onclick="openmenu()"></i>
+                </nav>
+                <div class="header-text">
+                    <p>Student</p>
+                    <h1>Hi, I'm <span>Yanislav Leshtakov</span><br>from Debelets (Veliko Tarnovo)</h1>
+                </div>
+            </div>
+        </div>
+<!-- - - - - - - - About - - - - - - -->
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="css/images/me.jpg">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p class="sub-text">
+                            I'm in my fourth year of studying Computer Systems and Technologies at the Technical Universiry of Varna. I've
+                            reached the moment where I want to obtain experience and more knowledge in the IT sector.
+                            I'm always looking forward to self-improve, learn more about technologies in general and get better at the things I love doing.<br><br>
+                            Currently studying Python.
+                        </p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skill')">Skills</p>
+                            <p class="tab-links" onclick="opentab('certif')">Certificates</p>
+                            <p class="tab-links" onclick="opentab('edu')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skill">
+                            <ul>
+                                <li>Teamwork<br><span>Communication, Collaboration</span></li>
+                                <li>Dexterity<br><span>Responsibility, Analytical</span></li>
+                                <li>Hard-Working<br><span>Problem-Solving</span></li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="certif">
+                            <ul>
+                                <li><a href="https://softuni.bg/certificates/details/105052/50b164f9" target="_blank">Java Basics</a><br></li>
+                                <li><a href="https://softuni.bg/certificates/details/111391/7c3fc678" target="_blank">Java Fundamentals</a><br><span>Java Advanced - I don't kile my score | Aiming for greater score</span></li>
+                                <li><a href="https://softuni.bg/certificates/details/147789/a37ef1a5" target="_blank">Python Basics</a><br><span>Python Fundamentals - Still Learning</span></li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="edu">
+                            <ul>
+                                <li><span>2013-2018</span><br>Foreign Language High School "Prof. Dr. Asen Zlatarov"</li>
+                                <li><span>2018-2022</span><br>Technical University of Varna</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- - - - - - - Contact - - - - - - -->
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contacts</h1>
+                        <p><i class="fa-solid fa-envelope fa-lg"></i>yankonl@abv.bg</p>
+                        <p><i class="fa-solid fa-phone"></i></p>
+                        <div class="other-things">
+                            <a href="https://www.facebook.com/YanislavNL" target="_blank"><i class="fab fa-facebook-square fa-lg"></i></a>
+                            <a href="https://www.linkedin.com/in/yanislav-leshtakov-173854246/" target="_blank"><i class="fa-brands fa-linkedin fa-lg"></i></a>
+                            <a href="https://github.com/YankoNL" target="_blank"><i class="fa-brands fa-square-github fa-lg"></i></a>
+                        </div>
+                    </div>
+                    <div class="contact-right">
+                        <form action="post_data.php" method="post">
+                            <input type="text" name="Name" placeholder="Name or Company" required>
+                            <input type="email" name="Email" placeholder="Email" required>
+                            <input type="text" name="Number" placeholder="Phone Number (optional)">
+                            <textarea name="Message" rows="5" placeholder="Message me (optional)"></textarea>
+                            <button type="submit" class="the-buttons subm-btn">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- - - - - - Tabs Function - - - - -->
+        <script>
+            var tablinks = document.getElementsByClassName('tab-links');
+            var tabcontents = document.getElementsByClassName('tab-contents');
+
+            function opentab(tabname){
+                for (tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for (tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+        </script>
+<!-- - - Mobile Side Bar Function - - -->
+        <script>
+            var sidemenu = document.getElementById("sidemenu");
+
+            function openmenu(){
+                sidemenu.style.right = "0";
+            }
+
+            function closemenu(){
+                sidemenu.style.right = "-200px";
+            }
+        </script>
+    </body>
+    <footer>
+        <div class="copyright">
+            <p><i class="fa-solid fa-copyright"></i> YankoNL</p>
+        </div>
+    </footer>
+</html>
