@@ -375,3 +375,11 @@ nav .m-icon {
     font-size: 14px;
   }
 }
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}

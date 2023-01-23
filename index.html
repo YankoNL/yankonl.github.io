@@ -6,17 +6,16 @@
 <title>Personal Resume YankoNL</title>
 <link rel="stylesheet" href="css/style.css">
 <script src="https://kit.fontawesome.com/b13402a14a.js" crossorigin="anonymous"></script>
-
 <header>
     <nav>
         <img src="css/images/logo.jpg" class="logo">
-        <ul class="navbar">
+        <ul id="sidemenu">
             <li><a href="#about">About</a></li>
             <li><a href="https://github.com/YankoNL/">GitHub</a></li>
             <li><a href="#contact">Contact</a></li>
-            <i class="m-icon fa-solid fa-xmark" onclick="closeMenu()"></i>
+            <i class="m-icon fa-solid fa-xmark" onclick="closemenu()"></i>
         </ul>
-        <i class="m-icon fa-solid fa-bars" onclick="openMenu()"></i>
+        <i class="m-icon fa-solid fa-bars" onclick="openmenu()"></i>
     </nav>
 </header>
 
@@ -63,12 +62,12 @@
                     </div>
                     <div class="tab-contents" id="certif">
                         <ul>
-                            <li><a href="https://softuni.bg/certificates/details/105052/50b164f9" target="_blank">Java
+                            <li><a href="https://softuni.bg/certificates/details/105052/50b164f9" target="_blank">&#10003 Java
                                     Basics</a><br></li>
-                            <li><a href="https://softuni.bg/certificates/details/111391/7c3fc678" target="_blank">Java
-                                    Fundamentals</a><br><span>Java Advanced - I don't like my score | Aiming for greater
+                            <li><a href="https://softuni.bg/certificates/details/111391/7c3fc678" target="_blank">&#10003 Java
+                                    Fundamentals</a><br><span>&#8776 Java Advanced - I don't like my score | Aiming for greater
                                     score</span></li>
-                            <li><a href="https://softuni.bg/certificates/details/147789/a37ef1a5" target="_blank">Python
+                            <li><a href="https://softuni.bg/certificates/details/147789/a37ef1a5" target="_blank">&#10003 Python
                                     Basics</a><br><span>Python Fundamentals - Still Learning</span></li>
                         </ul>
                     </div>
@@ -112,32 +111,8 @@
             </div>
         </div>
     </div>
-    <!-- - - - - - Tabs Function - - - - -->
-    <script>
-        var tablinks = document.getElementsByClassName('tab-links');
-        var tabcontents = document.getElementsByClassName('tab-contents');
-
-        function opentab(tabname) {
-            for (tablink of tablinks) {
-                tablink.classList.remove("active-link");
-            }
-            for (tabcontent of tabcontents) {
-                tabcontent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
-        }
-    </script>
-    <!-- - - Mobile Side Bar Function - - -->
-    <script>
-        function openMenu() {
-            document.getElementById("navbar").style.right = "0";
-        }
-
-        function closeMenu() {
-            document.getElementById("navbar").style.right = "-200px";
-        }
-    </script>
+    <!-- - - - - - Scripts - - - - -->
+    <script src="app.js"></script>
 </body>
 <footer>
     <div class="copyright">
