@@ -1,17 +1,19 @@
-*{
-  margin: 0;
-  padding: 0;
+:root {
+  margin: auto;
+  padding: initial;
   font-family: sans-serif;
   box-sizing: border-box;
-}
-
-html{
   scroll-behavior: smooth;
+
+  --white-custom: #fff;
+  --black-custom: #0d0d0d;
+  --blue-custom: #0d6ecf;
+  --grey-custom: #262626;
 }
 
 body{
-  background: #0d0d0d;
-  color: #fff;
+  background: var(--black-custom);
+  color: var(--white-custom);
 }
 
 #header{
@@ -44,7 +46,7 @@ nav ul li{
 }
 
 nav ul li a{
-  color: #fff;
+  color: var(--white-custom);
   text-decoration: none;
   font-size: 18px;
   position: relative;
@@ -54,7 +56,7 @@ nav ul li a::after{
   content: '';
   width: 0%;
   height: 3px;
-  background: #0d6ecf;
+  background: var(--blue-custom);
   position: absolute;
   left: 0;
   bottom: -6px;
@@ -76,7 +78,7 @@ nav ul li a:hover::after{
 }
 
 .header-text h1 span{
-  color: #0d6ecf;
+  color: var(--blue-custom);
 }
 
 /*-------------- About --------------*/
@@ -84,7 +86,7 @@ nav ul li a:hover::after{
   font-size: 30px;
   font-weight: 600;
   padding: 80px 0px;
-  color: #0d6ecf;
+  color: var(--blue-custom);
 }
 
 .row{
@@ -110,13 +112,13 @@ nav ul li a:hover::after{
   font-size: 60px;
   font-weight: 600;
   padding: 5px 0px;
-  color: #0d6ecf;
+  color: var(--blue-custom);
 }
 
 .sub-text{
   font-size: 20px;
   font-weight: 400;
-  color: #fff;
+  color: var(--white-custom);
 }
 
 .tab-titles{
@@ -136,7 +138,7 @@ nav ul li a:hover::after{
   content: '';
   width: 0%;
   height: 3px;
-  background: #0d6ecf;
+  background: var(--blue-custom);
   position: absolute;
   left: 0;
   bottom: -6px;
@@ -150,11 +152,12 @@ nav ul li a:hover::after{
 .tab-contents ul li{
   list-style: none;
   margin: 10px 0;
+  color: var(--blue-custom);
 }
 
 .tab-contents ul li span{
-  color: #0d6ecf;
-  font-size: 14px;
+  font-size: 20px;
+  color: var(--blue-custom);
 }
 .tab-contents{
   display: none;
@@ -175,7 +178,7 @@ nav ul li a:hover::after{
 }
 
 .contact-left p i{
-  color: #0d6ecf;
+  color: var(--blue-custom);
   margin-right: 14px;
   font-size: 25px;
 }
@@ -192,10 +195,10 @@ form input, form textarea{
   width: 100%;
   border: 0;
   outline: none;
-  background: #262626;
+  background: var(--grey-custom);
   padding: 15px;
   margin: 15px 0;
-  color: #fff;
+  color: var(--white-custom);
   font-size: 18px;
   border-radius: 6px;
 }
@@ -209,13 +212,13 @@ form input, form textarea{
   font-size: 28px;
   margin-top: 30px;
   margin-right: 15px;
-  color: #fff;
+  color: var(--white-custom);
   display: inline-block;
   transition: transform 0.5s;
 }
 
 .other-things a:hover{
-  color: #0d6ecf;
+  color: var(--blue-custom);
   transform: translateY(-3px);
 }
 
@@ -223,17 +226,17 @@ form input, form textarea{
   display: block;
   margin: 50px auto;
   width: fit-content;
-  border: 1px solid #0d6ecf;
+  border: 1px solid var(--blue-custom);
   padding: 14px 50px;
   border-radius: 6px;
   text-decoration: none;
-  color: #fff;
-  background: #0d0d0d;
+  color: var(--white-custom);
+  background: var(--black-custom);
   transition: background-color 0.5s;
 }
 
 .the-buttons:hover{
-  background-color: #0d6ecf;
+  background-color: var(--blue-custom);
 }
 
 .the-buttons.subm-btn{
@@ -248,13 +251,13 @@ form input, form textarea{
   width: 100%;
   text-align: center;
   padding: 10px 0;
-  background: #262626;
+  background: var(--grey-custom);
   font-weight: 300;
   margin-top: 20px;
 }
 
 .copyright i{
-  color: #0d6ecf;
+  color: var(--blue-custom);
 }
 /*-------------- Mobile View --------------*/
 nav .m-icon{
@@ -286,7 +289,7 @@ nav .m-icon{
     font-size: 20px;
   }
   nav ul{
-    background: #0d6ecf;
+    background: var(--blue-custom);
     position: fixed;
     top: 0;
     right: -200px;
