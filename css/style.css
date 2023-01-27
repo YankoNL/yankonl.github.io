@@ -7,7 +7,7 @@
 
   --white-custom: #fff;
   --black-custom: #0d0d0d;
-  --blue-custom: #0d6ecf;
+  --blue-custom: #00b6e4;
   --grey-custom: #262626;
 }
 
@@ -65,7 +65,8 @@ body {
 /*-------------- Home --------------*/
 #home {
   width: 100%;
-  height: 100vh;
+  height: 90vh;
+  padding: 5vh 1vw;
   background-image: url(images/background.jpg);
   background-size: cover;
   background-position: center;
@@ -93,13 +94,8 @@ body {
 #about {
   font-size: 30px;
   font-weight: 600;
-  padding: 80px 0px;
+  padding: 5vh 1vw;
   color: var(--blue-custom);
-}
-
-img.me {
-  max-width: 100%;
-  height: auto;
 }
 
 .row {
@@ -108,23 +104,30 @@ img.me {
   flex-wrap: wrap;
 }
 
-.about-col-1 {
+figure {
+  padding-top: 8vh;
+  float: left;
   flex-basis: 35%
 }
 
-.about-col-1 img {
-  width: 100%;
+figure img {
   border-radius: 15px;
+  max-width: 100%;
+  height: auto;
 }
 
-.about-col-2 {
+aside {
+  width: 60%;
+  float: right;
+  padding-left: 5px;
+  margin-left: 5px;
   flex-basis: 60%
 }
 
 .sub-title {
   font-size: 60px;
   font-weight: 600;
-  padding: 5px 0px;
+  padding: 50px 0px;
   color: var(--blue-custom);
 }
 
@@ -183,6 +186,9 @@ img.me {
 }
 
 /*-------------- Contact --------------*/
+#contact {
+  padding: 5vh 1vw;
+}
 
 .contact-left {
   flex-basis: 35%;
@@ -279,8 +285,61 @@ form textarea {
 
 /*-------------- Tablet View --------------*/
 @media only screen and (max-width: 1000px) {
+  img.logo {
+    max-width: 50%;
+    height: auto;
+  }
+
   #home {
     background-image: url(images/mobile-background.jpg);
+  }
+
+  .home-text {
+    margin-top: 5%;
+    margin-left: 5%;
+    font-size: 20px;
+  }
+
+  .home-text h1 {
+    font-size: 40px;
+    margin-top: 5px;
+  }
+
+  .sub-title {
+    font-size: 40px;
+  }
+
+  figure {
+    flex-basis: 100%;
+    margin-bottom: 5vh;
+  }
+
+  figure img {
+    max-width: 60%;
+    height: auto;
+  }
+
+  aside {
+    flex-basis: 100%;
+    font-size: 20px;
+  }
+
+  .tab-links {
+    font-size: 24px;
+    margin-right: 5vw;
+  }
+
+  .contact-right,
+  .contact-left {
+    flex-basis: 100%;
+  }
+
+  .contact-right{
+    margin-top: 3vh;
+  }
+
+  .copyright {
+    font-size: 20px;
   }
 }
 
@@ -291,11 +350,6 @@ nav .m-icon {
 
 @media only screen and (max-width: 600px) {
   img.logo {
-    max-width: 50%;
-    height: auto;
-  }
-
-  img.me {
     max-width: 50%;
     height: auto;
   }
@@ -348,16 +402,18 @@ nav .m-icon {
     font-size: 40px;
   }
 
-  .about-col-1,
-  .about-col-2 {
+  figure {
     flex-basis: 100%;
-  }
-
-  .about-col-1 {
     margin-bottom: 30px;
   }
 
-  .about-col-2 {
+  figure img {
+    max-width: 60%;
+    height: auto;
+  }
+
+  aside {
+    flex-basis: 100%;
     font-size: 14px;
   }
 
@@ -369,6 +425,10 @@ nav .m-icon {
   .contact-right,
   .contact-left {
     flex-basis: 100%;
+  }
+
+  .contact-right{
+    margin-top: 3vh;
   }
 
   .copyright {
