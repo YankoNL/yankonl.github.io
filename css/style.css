@@ -173,7 +173,7 @@ aside {
 
 .tab-contents ul li span {
   color: none;
-  font-size: 20px;
+  font-size: 75%;
   color: var(--blue-custom);
 }
 
